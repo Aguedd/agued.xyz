@@ -71,7 +71,7 @@ h2 {
 @media (max-width:420px){
 	:root{--icon-size:100px}
 }
-
+ 
 @font-face {
 	font-family: "Amaranth-Bold";
 	src: url("../assets/fonts/Amaranth-Bold.ttf") format("truetype");
