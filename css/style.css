@@ -1,5 +1,5 @@
 :root{
-	--icon-size: 150px;
+	--icon-size: 135px;
 }
 
 html,body{
@@ -25,30 +25,50 @@ body{
 
 h1, h2 {
 	font-size: 4rem;
-	margin: -0.5rem;
+	margin: -0.65rem;
 	font-family: "Amaranth-Bold", sans-serif;
+	opacity: 0;
+	transform: translateY(-40px);
+	animation: slide-down 1s ease forwards;
+}
+
+h1 {
+	animation-delay: 0s;
 }
 
 h2 {
 	margin-bottom: 2rem;
+	animation-delay: 0.15s;
+}
+
+.logo {
+	opacity: 0;
+	transform: translateY(-40px);
+	animation: slide-down 1s ease forwards;
+	animation-delay: 0.05s;
 }
 
 .social-icons{
 	display: flex;
-	gap: 2.5rem;
+	gap: 3.5rem;
 	align-items: center;
 	margin-top: -3rem;
 	padding-top: 1rem;
+
+	opacity: 0;
+	transform: translateY(-40px);
+	animation: slide-down 1s ease forwards;
+	animation-delay: 0.3s;
 }
 
 .social-icons .icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: var(--icon-size);
-    height: var(--icon-size);
-    text-decoration: none;
-    transition: transform .7s ease;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--icon-size);
+	height: var(--icon-size);
+	text-decoration: none;
+	transition: transform .7s ease;
 }
 
 .social-icons .icon:focus,
@@ -70,6 +90,17 @@ h2 {
 
 @media (max-width:420px){
 	:root{--icon-size:100px}
+}
+
+@keyframes slide-down {
+	from {
+		opacity: 0;
+		transform: translateY(-40px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
  
 @font-face {
