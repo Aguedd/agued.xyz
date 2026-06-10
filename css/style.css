@@ -1,0 +1,88 @@
+:root{
+	--icon-size: 150px;
+}
+
+html,body{
+	height: 100%;
+	margin: 0;
+	background: transparent;
+	color: black;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding: 2rem;
+	min-height: 100vh;
+	position: relative;
+	z-index: 1;
+}
+
+h1, h2 {
+	font-size: 4rem;
+	margin: -0.5rem;
+	font-family: "Amaranth-Bold", sans-serif;
+}
+
+h2 {
+	margin-bottom: 2rem;
+}
+
+.social-icons{
+	display: flex;
+	gap: 2.5rem;
+	align-items: center;
+	margin-top: -3rem;
+	padding-top: 1rem;
+}
+
+.social-icons .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    text-decoration: none;
+    transition: transform .7s ease;
+}
+
+.social-icons .icon:focus,
+.social-icons .icon:active{
+	outline: none;
+}
+
+.social-icons .icon svg,
+.social-icons .icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.social-icons .icon:hover{
+	transform: rotate(360deg);
+}
+
+@media (max-width:420px){
+	:root{--icon-size:100px}
+}
+
+@font-face {
+	font-family: "Amaranth-Bold";
+	src: url("../assets/fonts/Amaranth-Bold.ttf") format("truetype");
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
