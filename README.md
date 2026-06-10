@@ -1,1 +1,1 @@
-A simple landing page for my social links.aaaaaaaaaaaaaa
+A simple landing page for my social links.
