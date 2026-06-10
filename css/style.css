@@ -1,5 +1,5 @@
 :root{
-	--icon-size: 135px;
+	--icon-size: 130px;
 }
 
 html,body{
@@ -26,28 +26,30 @@ body{
 h1, h2 {
 	font-size: 4rem;
 	margin: -0.65rem;
-	font-family: "Amaranth-Bold", sans-serif;
 	opacity: 0;
+	font-family: "Amaranth-Bold", sans-serif;
 	transform: translateY(-40px);
 	animation: slide-down 1s ease forwards;
 }
 
 h1 {
 	animation-delay: 0s;
+	transition: transform 0.3s ease;
+}
+
+h1 span {
+	display: inline-block;
+	transition: transform 0.3s ease;
+}
+
+h1 span:hover {
+	transform: scale(1.01);
 }
 
 h2 {
 	margin-bottom: 2rem;
 	animation-delay: 0.15s;
 }
-
-.logo {
-	opacity: 0;
-	transform: translateY(-40px);
-	animation: slide-down 1s ease forwards;
-	animation-delay: 0.05s;
-}
-
 .social-icons{
 	display: flex;
 	gap: 3.5rem;
